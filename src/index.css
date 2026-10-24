@@ -1,1 +1,96 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bg: #08111c;
+  --color-panel: #101f2d;
+  --color-border: #294051;
+  --color-ink: #eef6fb;
+  --color-muted: #9eb4c3;
+  --color-accent: #5de3c4;
+  --color-warn: #f5bc6e;
+  --color-card-from: #132636;
+  --color-card-to: #0e1b29;
+  --color-check-bg: #0b1926;
+  --color-status-bg: #233644;
+  --color-notice-bg: #1c2630;
+  --color-dark-text: #08212b;
+}
+
+body {
+  background: radial-gradient(circle at 80% 0, #173a4b 0%, transparent 34%), #08111c;
+  color: #eef6fb;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+@media print {
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  .card-print {
+    background: #fff !important;
+    color: #111 !important;
+    border-color: #ccc !important;
+  }
+  .print-muted {
+    color: #555 !important;
+  }
+  .print-hide {
+    display: none !important;
+  }
+  .print-metric {
+    color: #111 !important;
+  }
+  section {
+    break-inside: avoid;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08111c;
+}
+::-webkit-scrollbar-thumb {
+  background: #294051;
+  border-radius: 4px;
+}
+
+/* Range input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #294052;
+  border-radius: 3px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #5de3c4;
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #5de3c4;
+  cursor: pointer;
+  border: none;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  accent-color: #5de3c4;
+  width: 19px;
+  height: 19px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}

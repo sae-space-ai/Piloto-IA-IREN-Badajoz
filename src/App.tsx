@@ -169,7 +169,25 @@ function Login() {
           </form>
         </div>
 
-        <p className="text-center text-xs text-muted mt-6">v2.4.1 · Datos locales</p>
+        <div className="mt-5 bg-gradient-to-br from-card-from to-card-to border border-border rounded-2xl p-4">
+          <p className="text-xs text-muted mb-2 font-medium">Credenciales de acceso:</p>
+          <div className="space-y-2 text-xs">
+            <div className="flex justify-between items-center">
+              <span className="text-muted">Administrador:</span>
+              <code className="text-accent bg-check-bg px-2 py-0.5 rounded">admin@techeval.pro</code>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-muted">Analista:</span>
+              <code className="text-accent bg-check-bg px-2 py-0.5 rounded">user@techeval.pro</code>
+            </div>
+            <div className="flex justify-between items-center pt-2 border-t border-border/50">
+              <span className="text-muted">Contraseña:</span>
+              <code className="text-accent bg-check-bg px-2 py-0.5 rounded">demo1234</code>
+            </div>
+          </div>
+        </div>
+
+        <p className="text-center text-xs text-muted mt-4">v2.4.1 · Datos locales</p>
       </div>
     </div>
   );
